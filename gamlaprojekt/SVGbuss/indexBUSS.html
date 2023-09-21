@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<title>SVG3</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+
+	/*	#smoke
+		{
+			transform: translate(-115px, 5px);
+
+		}
+	*/
+
+		@keyframes smokemove 
+		{
+			0%
+			{
+				transform: translate(-100px, 20px);
+			}
+
+			100% 
+			{
+				transform: translate(-140px, -50px) scale(2.0);
+				opacity: 0;
+			}
+    }
+
+		#smoke 
+		{
+			animation-name: smokemove;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-timing-function:linear;
+		}
+
+		
+		@keyframes wheelsmove 
+		{
+			0%
+			{
+				transform:  translate(-65px, 55px) rotate(0deg);
+		
+			}
+			100%
+			{
+				transform: translate(-65px, 55px) rotate(360deg);
+			}	
+		}
+		#framhjul
+		{
+			animation-name: wheelsmove;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
+		@keyframes wheelsmove2 
+		{
+			0%
+			{
+				transform:  translate(45px, 55px) rotate(0deg);
+		
+			}
+			100%
+			{
+				transform: translate(45px, 55px) rotate(360deg);
+			}
+		}
+		#bakhjul
+		{
+			animation-name: wheelsmove2;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
+		@keyframes carmove
+		{
+			0%
+			{
+				transform:  translate(-150px, 0px); /* hade 35 förut, istället för 0 */
+			}
+			100%
+			{
+				transform: translate(500px, 0px); /* hade 35 förut, istället för 0 */
+			}
+		}
+
+		#car
+		{
+			animation-name: carmove;
+      animation-duration: 5000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; 
+		}
+
+
+		#sun 
+		{
+      transform: translate(-140px,-140px);
+    }
+    #sunlinje1 
+		{
+      transform: translate(-100px,-100px);
+    }
+		#sunlinje2 
+		{
+    	transform: translate(-130px,-90px);
+    }
+    #sunlinje3 
+		{
+      transform: translate(-90px,-130px);
+		}
+
+  	</style>
+	</head>
+	<body>
+    <svg width="300px" viewBox="-150 -150 300 300" style="border:2px dashed blue;">			
+
+			<defs>
+				<linearGradient id="backgroundgradient" x1="0" x2="0" y1="0" y2="1">
+					<stop offset="0%" stop-color="#ee82ee"/>
+					<stop offset="13%%" stop-color="#8a2be2"/>
+					<stop offset="20%" stop-color="#1e90ff"/>
+					<stop offset="30%" stop-color="#1e90ff"/>
+					<stop offset="58%" stop-color="#228b22"/>
+				</linearGradient>
+			</defs>
+		 <!-- För att kunna ha gradient -->
+		 <rect id="r1" x="-300" y="-300" width="800px" height="800px" fill="url(#backgroundgradient)" />
+
+			<g id="theSun">
+				<circle id="sun" cx="0" cy="0" r="40" fill="#ffff00"></circle>
+				<line id="sunlinje1" x1="40" y1="35" stroke="#ffff00" stroke-width="5" stroke-linecap="butt"></line>
+				<line id="sunlinje2" x1="5" y1="40" stroke="#ffff00" stroke-width="5" stroke-linecap="butt"></line>
+				<line id="sunlinje3" x1="50" y1="10" stroke="#ffff00" stroke-width="5" stroke-linecap="butt"></line>
+			</g>
+			
+			<g id="car">	
+				<rect id="londonbil" x="-95" y="-47.5"  width="190" height="95" fill="#ff0000"  rx="14" />
+			
+				<rect id="overwindow1" x="-80" y="-40" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="overwindow2" x="-58" y="-40" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="overwindow3" x="-36" y="-40" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="overwindow4" x="-13" y="-40" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="overwindow5" x="10" y="-40" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="overwindow6" x="32" y="-40" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="overwindow7" x="55" y="-40" width="39" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				
+				<rect id="underwindow1" x="-80" y="10" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="underwindow2" x="-57" y="10" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="underwindow3" x="-33" y="10" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="underwindow4" x="-10" y="10" width="20" height="37" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="underwindow5" x="13" y="10" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="underwindow6" x="38" y="10" width="20" height="23" fill="#ffffff" stroke="#000000" rx="3"/>
+				<rect id="underwindow7" x="63" y="10" width="20" height="37" fill="#ffffff" stroke="#000000" rx="3"/>
+
+				<rect id="pipe" x="-100" y="43" width="12" height="4" fill="#000000" stroke="#000000" rx="3"/>
+				
+				<g id="framhjul">
+					<circle id="wheel1" fill="#00000" fill-rule="evenodd" stroke="#000000" stroke-width="1.5" clip-rule="evenodd"  cx="0" cy="0"  r="17" />
+					<rect id="innerwheel1"  x="-5" y="-5" width="10" height="10" fill="#a9a9a9" stroke="#000000"/>
+				</g>
+				
+				<g id="bakhjul">
+					<circle id="wheel2" fill="#00000" fill-rule="evenodd" stroke="#000000" stroke-width="1.5" clip-rule="evenodd"  cx="0" cy="0" r="17" />
+					<rect id="innerwheel2" x="-5" y="-5" width="10" height="10" fill="#a9a9a9" stroke="#000000"/>
+				</g>
+
+				<g id="smoke">
+					<circle cx="-11" cy="20"  r="5" fill="#020202"/>
+					<circle cx="-4" cy="22"  r="6" fill="#020202"/>
+					<circle cx="-1" cy="30"  r="5" fill="#020202"/>
+					<circle cx="-10" cy="27"  r="6" fill="#020202"/>
+				</g>
+			</g>
+	
+    </svg>
+	</body>
+</html>
