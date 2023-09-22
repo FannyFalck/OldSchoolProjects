@@ -1,122 +1,152 @@
 <!DOCTYPE html>
 <html lang="sv">
 	<head>
-		<title>SVG3</title>
+		<title>London buses SVG</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
 
-	/*	#smoke
-		{
-			transform: translate(-115px, 5px);
+			/*	#smoke
+				{
+					transform: translate(-115px, 5px);
 
-		}
-	*/
+				}
+			*/
 
-		@keyframes smokemove 
-		{
-			0%
+			@keyframes smokemove 
 			{
-				transform: translate(-100px, 20px);
+				0%
+				{
+					transform: translate(-100px, 20px);
+				}
+
+				100% 
+				{
+					transform: translate(-140px, -50px) scale(2.0);
+					opacity: 0;
+				}
 			}
 
-			100% 
+			#smoke 
 			{
-				transform: translate(-140px, -50px) scale(2.0);
-				opacity: 0;
+				animation-name: smokemove;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation-timing-function:linear;
 			}
-    }
 
-		#smoke 
-		{
-			animation-name: smokemove;
-			animation-duration: 4s;
-			animation-iteration-count: infinite;
-			animation-timing-function:linear;
-		}
-
-		
-		@keyframes wheelsmove 
-		{
-			0%
+			
+			@keyframes wheelsmove 
 			{
-				transform:  translate(-65px, 55px) rotate(0deg);
-		
+				0%
+				{
+					transform:  translate(-65px, 55px) rotate(0deg);
+			
+				}
+				100%
+				{
+					transform: translate(-65px, 55px) rotate(360deg);
+				}	
 			}
-			100%
+			#framhjul
 			{
-				transform: translate(-65px, 55px) rotate(360deg);
-			}	
-		}
-		#framhjul
-		{
-			animation-name: wheelsmove;
-			animation-duration: 4s;
-			animation-iteration-count: infinite;
-			animation-timing-function: linear;
-		}
-
-		@keyframes wheelsmove2 
-		{
-			0%
-			{
-				transform:  translate(45px, 55px) rotate(0deg);
-		
+				animation-name: wheelsmove;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
 			}
-			100%
+
+			@keyframes wheelsmove2 
 			{
-				transform: translate(45px, 55px) rotate(360deg);
+				0%
+				{
+					transform:  translate(45px, 55px) rotate(0deg);
+			
+				}
+				100%
+				{
+					transform: translate(45px, 55px) rotate(360deg);
+				}
 			}
-		}
-		#bakhjul
-		{
-			animation-name: wheelsmove2;
-			animation-duration: 4s;
-			animation-iteration-count: infinite;
-			animation-timing-function: linear;
-		}
-
-		@keyframes carmove
-		{
-			0%
+			#bakhjul
 			{
-				transform:  translate(-150px, 0px); /* hade 35 förut, istället för 0 */
+				animation-name: wheelsmove2;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
 			}
-			100%
+
+			@keyframes carmove
 			{
-				transform: translate(500px, 0px); /* hade 35 förut, istället för 0 */
+				0%
+				{
+					transform:  translate(-150px, 0px); /* hade 35 förut, istället för 0 */
+				}
+				100%
+				{
+					transform: translate(500px, 0px); /* hade 35 förut, istället för 0 */
+				}
 			}
-		}
 
-		#car
-		{
-			animation-name: carmove;
-      animation-duration: 5000ms;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear; 
-		}
+			#car
+			{
+				animation-name: carmove;
+				animation-duration: 5000ms;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear; 
+			}
 
 
-		#sun 
-		{
-      transform: translate(-140px,-140px);
-    }
-    #sunlinje1 
-		{
-      transform: translate(-100px,-100px);
-    }
-		#sunlinje2 
-		{
-    	transform: translate(-130px,-90px);
-    }
-    #sunlinje3 
-		{
-      transform: translate(-90px,-130px);
-		}
+			#sun 
+			{
+				transform: translate(-140px,-140px);
+			}
+			#sunlinje1 
+			{
+				transform: translate(-100px,-100px);
+			}
+			#sunlinje2 
+			{
+				transform: translate(-130px,-90px);
+			}
+			#sunlinje3 
+			{
+				transform: translate(-90px,-130px);
+			}
 
-  	</style>
+			/* Återställ standardmarginaler och fyllning för hela sidan */
+			html, body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+
+			/* Ge navigationsfältet en flexbox-layout */
+			.navigationforbuss {
+				display: flex;
+				justify-content: left; /* Centrera innehållet horisontellt */
+				align-items: center; /* Centrera innehållet vertikalt */
+				background-color: #70BBEE;
+				height: 100%; /* Hela höjden av sidan */
+				margin: 0;
+				padding: 30px;
+			}
+			.navigationforbuss a{
+				color: black; /* Ändra till önskad färg, här röd (#FF0000) */
+  			text-decoration: none;
+			}
+
+	  </style>
 	</head>
 	<body>
-    <svg width="400px" viewBox="-150 -150 300 300" style="border:2px dashed black;">			
+	
+		<nav>
+
+			<h3 class="navigationforbuss"> <a href="https://fannyfalck.github.io/OldSchoolProjects/gamlaprojekt/traningsapp/#" target="_blank"> Tillbaka till Träningsappen </a> </h3>
+		</nav>
+		<br>
+
+		<p style="margin-left: 40px; ">Här är en Londonbuss gjord av SVG, som skapades i kursen Mobilapplikation Design. Rörelsen är skapta med @Keyframes </p>
+    <svg width="400px" viewBox="-150 -150 300 300" style="border:2px dashed black; margin-left: 50px;">			
 
 			<defs>
 				<linearGradient id="backgroundgradient" x1="0" x2="0" y1="0" y2="1">
