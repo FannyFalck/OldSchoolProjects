@@ -1,0 +1,238 @@
+body {
+	margin: 0;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* Navigation bar */
+
+.navigationbar {
+	background-color: burlywood;
+	text-align: right;
+	font-size: 20px;
+	padding: 20px;
+}
+
+.navigationbar > a {
+	margin-right: 0px;
+	padding: 10px;
+	border-right: solid 1px white;	
+}
+
+.navigationbar a:hover {
+	background-color: lightslategray;
+	transition: 1s;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Main Page*/
+
+.mainimage {
+	margin: auto;
+	display: block;
+	padding-top: 20px;   
+}
+
+.maintext {
+	text-align: center;
+	font-size: 20px;
+}
+.maintext p {
+	max-width: 600px;
+	padding-left: 410px;
+}
+
+/* information */
+
+.informationtext{
+	justify-content: left;
+	margin-left: 20px;
+}
+.informationtext p {
+	max-width: 700px;
+}
+
+.informationtext a {
+	color: black;
+	text-decoration: underline;
+	font-size: 18px;
+}
+
+#flex-container {
+	display: inline-flex;
+}
+
+.container2 {
+	display: inline-block;
+	vertical-align: top;
+	background:burlywood;
+	border-radius: 50%;
+	width:250px;
+	height: 250px;
+	margin-top: 65px;
+	margin-left: 100px;
+	border: solid 2px black;
+}
+
+.container2 p {
+	margin-top: 70px;
+	margin: auto auto;
+}
+
+.container2 a {
+	text-decoration: underline;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	text-align: center;
+	font-size: 20px;
+	transition: 1s;
+	width: 140px;
+	margin: auto auto;
+	margin-top: 10px;
+}
+
+ .container2 a:hover {
+	background-color: lightslategray;
+	height: 24px;
+	width: 140px;
+	margin: auto auto;
+	margin-top: 10px;
+}
+
+.container2 p {
+	color: black;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	margin-top: 80px;
+	text-align: center;
+	font-size: 18px;
+}
+
+table {
+	background-color: burlywood;
+	font-size: 25px;
+	border-collapse: collapse;
+	width: 600px;
+	height: 200px;
+	border: solid 2px black;
+	margin: 30px;
+}
+
+caption {
+	font-size: 30px;
+}
+
+table thead th {
+  border-bottom: 2px solid black;
+}
+
+table tfoot td {
+	border-top: 2px solid black;
+}
+
+table tbody {
+	width: 10px;	
+}
+
+/* Destination */
+
+.destinationstext {
+	justify-content: left;
+	margin-left: 20px;
+}
+
+ol {
+	background:burlywood;
+	border: solid 2px black;
+	font-size: 25px;
+	width: 350px;
+	height: 400px;
+	margin: 30px;
+}
+
+ol li {
+	padding-top: 20px;		
+}
+
+/*Portfolio nedåt*/
+
+.portfoliotext {
+	justify-content: left;
+	margin-left: 20px;
+}
+
+figure {
+  display: inline-block;
+  margin: 2px;
+}
+
+figure img {
+  vertical-align: top;
+}
+
+figure figcaption {
+	border: solid 1px black;
+	text-align: center;
+	width: 270px;
+	box-sizing: border-box;
+	background-color: burlywood;
+	font-size: 22px;
+}
+
+.bildrad1 {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	margin-bottom: 100px;
+}
+
+.bildrad2 figcaption {
+	width: 300px;
+}
+
+.bildrad2 {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	margin: 5px;
+}
+
+.copyright {
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+/* Contact */
+
+.contacttext {
+	justify-content: left;
+	margin-left: 20px;
+}
+
+form{
+	background-color: burlywood;
+	border: solid 1px black;
+	margin: 30px;
+	width: 500px;
+	padding: 30px;
+}
+
+fieldset > div {
+  margin: 10px;
+}
+/* __ Ny kod för som lades till för att lägga till knappen "tillbaka till träningsapp" */
+.placeringavLink{
+	float: left;
+	padding: 20px;
+	font-size: 20px;
+}
+
+.placeringavLink:hover{
+	background-color: lightslategray;
+	transition: 1s;	
+}

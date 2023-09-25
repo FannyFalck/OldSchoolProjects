@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contact</title>
+		<link rel="stylesheet" href="webproject.CSS">
+	</head>
+	<body>
+		<a  class="placeringavLink" href="../traningsapp/index.html"> <b>Tillbaka till Träningsapp</b></a>
+		
+		<div class="navigationbar">
+			<a href="index.html">Hem</a>
+			<a href="information.html">Information</a> 
+			<a href="destinations.html">Resmål</a>
+			<a href="portfolio.html">Portfolio</a>
+			<a href="contact.html">Kontakta oss</a>
+			<input type="text" placeholder="Search..">
+		</div>
+
+		<div class="contacttext">
+			<h2>Kontakta oss här!</h2>	
+			<p>Om ni är sugna på att uppleva denna fantastiska ö så skicka in ett intresseanmälan. </p>
+		</div>
+
+		<form action="mailto:b20fanfa@student.his.se" method="POST">
+
+			<fieldset>
+				<legend> Personal information </legend>
+				<div><label>First name:</label><input type="text" id="First" name="First" placeholder="John"/></div>
+				<div><label>Last name:</label><input type="text" id="lLast" name="Last" placeholder="Smith"/></div>
+				<div><label>Number:</label><input type="text" id="number" name="number" placeholder="+46..."/></div>
+				<div><label>Email address:</label><input type="text" id="Email" name="Email" placeholder="john.smith@gmail.com"/></div>
+				<div><label>Family members:</label><input type="text" id="Family" name="Family" placeholder="1,2,3.."/></div>
+				<div><label>Date from - to:</label><input type="text" id="Date" name="Date" placeholder="1/7 - 5/7"/></div>
+				<div><label>Message:</label> <textarea name="comment" cols="50" rows="6"> Write a message...</textarea> </div>
+			</fieldset>
+
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
